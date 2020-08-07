@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_weight="0"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/customer_info"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_expand_less_24px" />
+
+        <ImageView
+            android:id="@+id/ivEditCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_edit_24px" />
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutCustomerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="48dp" />
+
+        <EditText
+            android:id="@+id/etSurName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:width="270dp"
+            android:hint="@string/surname"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:width="130dp"
+            android:ems="7"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/etSurName"
+            app:layout_constraintTop_toBottomOf="@+id/etSurName" />
+
+        <EditText
+            android:id="@+id/etMiddleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="130dp"
+            android:ems="7"
+            android:hint="@string/middle_name"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/etName"
+            app:layout_constraintEnd_toEndOf="@+id/etSurName" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:width="270dp"
+            android:hint="@string/phone"
+            android:inputType="phone"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/etSurName"
+            app:layout_constraintStart_toStartOf="@+id/etSurName"
+            app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:width="270dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/etPhone"
+            app:layout_constraintStart_toStartOf="@+id/etPhone"
+            app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+
+        <EditText
+            android:id="@+id/etState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:width="130dp"
+            android:ems="7"
+            android:hint="@string/state"
+            android:inputType="textPostalAddress"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/etCity"
+            app:layout_constraintTop_toBottomOf="@+id/etCity" />
+
+        <EditText
+            android:id="@+id/etZipCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:width="130dp"
+            android:ems="7"
+            android:hint="@string/zip_code"
+            android:inputType="textPostalAddress"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/etState"
+            app:layout_constraintEnd_toEndOf="@+id/etCity"
+            app:layout_constraintTop_toBottomOf="@+id/etCity" />
+
+        <EditText
+            android:id="@+id/etAdress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:width="270dp"
+            android:hint="@string/adress"
+            android:inputType="textPostalAddress"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/etEmail"
+            app:layout_constraintStart_toStartOf="@+id/etEmail"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+        <EditText
+            android:id="@+id/etCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:width="270dp"
+            android:hint="@string/city"
+            android:inputType="textPostalAddress"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/etAdress"
+            app:layout_constraintStart_toStartOf="@+id/etAdress"
+            app:layout_constraintTop_toBottomOf="@+id/etAdress" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/etSurName"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etSurName"
+            app:layout_constraintVertical_bias="0.523"
+            app:srcCompat="@drawable/ic_person_24px" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/etPhone"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/etPhone"
+            app:srcCompat="@drawable/ic_phone_24px" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/etEmail"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/etEmail"
+            app:srcCompat="@drawable/ic_email_24px" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/etAdress"
+            app:srcCompat="@drawable/ic_location_on_24px" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="0"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:gravity="center_horizontal"
+            android:text="@string/order_info"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ivExpandMinimizeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_expand_less_24px" />
+
+        <ImageView
+            android:id="@+id/ivEditOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_edit_24px" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutOrderInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:baselineAligned="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/date_finish"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvDateFinish_Order"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateFinish_Order" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/date_start"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvDateStart_Order"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateStart_Order" />
+
+        <TextView
+            android:id="@+id/tvNumOrder_Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ECECEC"
+            android:padding="2dp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tlTable_order"
+            app:layout_constraintTop_toTopOf="@+id/tvDateStart_Order"
+            tools:text="#111" />
+
+        <TextView
+            android:id="@+id/tvDateFinish_Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ECECEC"
+            android:padding="2dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tlTable_order"
+            app:layout_constraintTop_toTopOf="@+id/tvDateStart_Order"
+            tools:text="23 feb 2020" />
+
+        <TextView
+            android:id="@+id/tvDateStart_Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#ECECEC"
+            android:padding="2dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvDateFinish_Order"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toEndOf="@+id/tvNumOrder_Info"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="20 feb 2020" />
+
+        <TableLayout
+            android:id="@+id/tlTable_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateStart_Order">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="60"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="@string/product"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="10"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="@string/price"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="10"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="@string/count"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="20"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="@string/sum_product"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </TableLayout>
+
+        <ImageView
+            android:id="@+id/ivAddRow_Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/tlTable_order"
+            app:layout_constraintStart_toStartOf="@+id/tlTable_order"
+            app:layout_constraintTop_toBottomOf="@+id/tvNumOrder_Info"
+            app:srcCompat="@drawable/ic_add_circle_24px" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/sum_paid"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tlTable_order"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/shipping"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tlTable_order"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/status_order"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tlTable_order"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/sum_order"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tlTable_order"
+            app:layout_constraintTop_toBottomOf="@+id/tlTable_order" />
+
+        <TextView
+            android:id="@+id/tvSumOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView23"
+            app:layout_constraintEnd_toEndOf="@+id/tlTable_order"
+            tools:text="2000 р." />
+
+        <TextView
+            android:id="@+id/tvPaidSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView24"
+            app:layout_constraintEnd_toEndOf="@+id/tlTable_order"
+            tools:text="1000 р." />
+
+        <TextView
+            android:id="@+id/tvShipping_Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView25"
+            app:layout_constraintEnd_toEndOf="@+id/tlTable_order"
+            tools:text="Post of Russia" />
+
+        <TextView
+            android:id="@+id/tvStatus_Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView26"
+            app:layout_constraintEnd_toEndOf="@+id/tlTable_order"
+            tools:text="In progress" />
+
+        <TextView
+            android:id="@+id/tvPaidPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView24"
+            app:layout_constraintEnd_toStartOf="@+id/tvPaidSum"
+            tools:text="50%" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

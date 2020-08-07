@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/add_order"
+        android:icon="@drawable/ic_add_circle_24px"
+        android:title="New order"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/view_status"
+        android:icon="@drawable/ic_baseline_list_24"
+        android:title="status"
+        app:showAsAction="never|withText" />
+    <item
+        android:id="@+id/view_product"
+        android:icon="@drawable/ic_baseline_reorder_24"
+        android:title="products"
+        app:showAsAction="never|withText" />
+    <item
+        android:id="@+id/view_customers"
+        android:icon="@drawable/ic_baseline_face_24"
+        android:title="customers" />
+</menu>

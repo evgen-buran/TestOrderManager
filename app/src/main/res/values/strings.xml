@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Order Manager</string>
+<!--detailed order: customer info -->
+    <string name="customer_info">Customer\nInfo</string>
+    <string name="surname">Surname</string>
+    <string name="name">Name</string>
+    <string name="middle_name">Middle name</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="adress">Adress</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="zip_code">Zip-code</string>
+
+    <!--detailed order: order info -->
+    <string name="order_info">Order Info</string>
+    <string name="date_start">Date start</string>
+    <string name="date_finish">Date finish</string>
+    <string name="product">Product</string>
+    <string name="price">Price</string>
+    <string name="count">Count</string>
+    <string name="sum_product">Sum</string>
+    <string name="sum_order">Order sum</string>
+    <string name="sum_paid">Paid</string>
+    <string name="percent_paid">Percent paid</string>
+    <string name="shipping">Shipping</string>
+    <string name="status_order">Status</string>
+
+</resources>
