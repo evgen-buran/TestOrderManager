@@ -117,7 +117,7 @@ public class CustomerLab {
 	}
 
 
-	//------------------------вспомогательные методы: запрос из БД, формирование ContentValues------------------
+	//------------------------вспомогательные методы: запрос из БД, формирование ContentValues-----------------
 	private AppCursorWrapper queryCustomer(String where, String[] whereArgs) {
 		Cursor cursor = dateBase.query(TableCustomers.TABLE_CUSTOMERS,
 		                               null,
